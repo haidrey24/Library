@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/brucehaidrey/Documents/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/brucehaidrey/Desktop/eclipse copy/SmoothStack/jb4/PA1/libs/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/brucehaidrey/Desktop/eclipse copy/SmoothStack/jb4/PA1/libs/junit-4.12.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

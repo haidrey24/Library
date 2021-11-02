@@ -1,0 +1,24 @@
+Add flight:
+
+User: 
+Origin Id
+Destination id
+Airplane type
+
+need entity/domain/pojo objects to hold user objects
+getter and setters to retrieve data - no business logic
+
+DAO - design pattern where you isolate the code of talking to the databases
+only to a particular package
+# of DAO's = # of tables
+
+check/insert originId and desId into airport table
+insert into route (orid, desid) values ('ABC', 'DEF'); - Exception
+insert into airplane table
+
+
+DB Transaction - same connection object
+
+
+
+ 
