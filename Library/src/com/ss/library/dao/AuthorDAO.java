@@ -12,8 +12,6 @@ import com.ss.library.entity.Author;
 
 public class AuthorDAO extends BaseDAO<Author> {
 	
-	
-	
 	public AuthorDAO(Connection conn) {
 		super(conn);
 	}

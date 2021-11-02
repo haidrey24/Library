@@ -11,22 +11,22 @@ import java.util.List;
  */
 public class Author {
 	
-	private int id;
+	private Integer id;
 	private String name;
-	private List<BookAuthors> ba;
+	private List<BookAuthors> baList;
 	
 	/**
 	 * @return the ba
 	 */
 	public List<BookAuthors> getBa() {
-		return ba;
+		return baList;
 	}
 
 	/**
 	 * @param ba the ba to set
 	 */
-	public void setBa(List<BookAuthors> ba) {
-		this.ba = ba;
+	public void setBa(List<BookAuthors> baList) {
+		this.baList = baList;
 	}
 
 	/**
