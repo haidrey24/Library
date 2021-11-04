@@ -11,56 +11,47 @@ import java.util.List;
  */
 public class Author {
 	
-	private Integer id;
-	private String name;
+	private Integer authorId;
+	private String authorName;
 	private List<BookAuthors> baList;
 	
 	/**
-	 * @return the ba
+	 * @return the authorId
 	 */
-	public List<BookAuthors> getBa() {
+	public Integer getAuthorId() {
+		return authorId;
+	}
+	/**
+	 * @param authorId the authorId to set
+	 */
+	public void setAuthorId(Integer authorId) {
+		this.authorId = authorId;
+	}
+	/**
+	 * @return the authorName
+	 */
+	public String getAuthorName() {
+		return authorName;
+	}
+	/**
+	 * @param authorName the authorName to set
+	 */
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+	/**
+	 * @return the baList
+	 */
+	public List<BookAuthors> getBaList() {
 		return baList;
 	}
-
 	/**
-	 * @param ba the ba to set
+	 * @param baList the baList to set
 	 */
-	public void setBa(List<BookAuthors> baList) {
+	public void setBaList(List<BookAuthors> baList) {
 		this.baList = baList;
 	}
+	
 
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-	
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return name;
-	}
-	
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	
-	
-	
-	
-	
 
 }
