@@ -17,7 +17,7 @@ import java.util.List;
  */
 public abstract class BaseDAO<T> {
 	
-	protected static Connection conn = null;
+	protected Connection conn = null;
 	
 	public BaseDAO(Connection conn) {
 		this.conn = conn;
@@ -55,12 +55,12 @@ public abstract class BaseDAO<T> {
 				count++;
 			}
 		}
-		pstmt.execute();
+		pstmt.executeUpdate();
 		ResultSet rs = pstmt.getGeneratedKeys();
 		
 		while (rs.next())
 		{
-			return rs.getInt(0); // check if this is 0 or 1
+			return rs.getInt(1); // check if this is 0 or 1
 		}
 		
 		return null;
