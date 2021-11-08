@@ -3,7 +3,7 @@
  */
 package com.ss.library.entity;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 /**
  * @author brucehaidrey
@@ -14,9 +14,9 @@ public class BookLoans {
 	private Book bookId;
 	private LibraryBranch branchId;
 	private Borrower cardNo;
-	private LocalDateTime dateOut;
-	private LocalDateTime dueDate;
-	private LocalDateTime dateIn;
+	private Timestamp dateOut;
+	private Timestamp dueDate;
+	private Timestamp dateIn;
 	
 	/**
 	 * @return the bookId
@@ -54,43 +54,24 @@ public class BookLoans {
 	public void setCardNo(Borrower cardNo) {
 		this.cardNo = cardNo;
 	}
-	/**
-	 * @return the dateOut
-	 */
-	public LocalDateTime getDateOut() {
+	public Timestamp getDateOut() {
 		return dateOut;
 	}
-	/**
-	 * @param dateOut the dateOut to set
-	 */
-	public void setDateOut(LocalDateTime dateOut) {
+	public void setDateOut(Timestamp dateOut) {
 		this.dateOut = dateOut;
 	}
-	/**
-	 * @return the dueDate
-	 */
-	public LocalDateTime getDueDate() {
+	public Timestamp getDueDate() {
 		return dueDate;
 	}
-	/**
-	 * @param dueDate the dueDate to set
-	 */
-	public void setDueDate(LocalDateTime dueDate) {
+	public void setDueDate(Timestamp dueDate) {
 		this.dueDate = dueDate;
 	}
-	/**
-	 * @return the dateIn
-	 */
-	public LocalDateTime getDateIn() {
+	public Timestamp getDateIn() {
 		return dateIn;
 	}
-	/**
-	 * @param dateIn the dateIn to set
-	 */
-	public void setDateIn(LocalDateTime dateIn) {
+	public void setDateIn(Timestamp dateIn) {
 		this.dateIn = dateIn;
 	}
-	
 	
 	
 }

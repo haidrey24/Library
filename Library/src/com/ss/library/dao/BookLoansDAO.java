@@ -51,8 +51,8 @@ public class BookLoansDAO extends BaseDAO<BookLoans>{
 	 * @param bl - BookLoan to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateBookLoan(BookLoans bl) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_book_loans SET branchId = ? AND cardNo = ? AND dateOut = ? AND dueDate = ? WHERE bookId = ?",
+	public void updateBookLoan(BookLoans bl) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_book_loans SET branchId = ?, cardNo = ?, dateOut = ?, dueDate = ? WHERE bookId = ?",
 				new Object[] {bl.getBranchId(), bl.getCardNo(), bl.getDateOut(), bl.getDueDate(), bl.getBookId()});
 	}
 	
@@ -86,8 +86,8 @@ public class BookLoansDAO extends BaseDAO<BookLoans>{
 			bl.getBookId().setBookId(rs.getInt("bookId"));
 			bl.getBranchId().setBranchId(rs.getInt("branchId"));
 			bl.getCardNo().setCardNo(rs.getInt("cardNo"));
-			// need to add dateout and due date
-			
+			bl.setDateOut(rs.getTimestamp("dateOut"));
+			bl.setDueDate(rs.getTimestamp("dueDate"));
 			blList.add(bl);
 		}
 		return blList;

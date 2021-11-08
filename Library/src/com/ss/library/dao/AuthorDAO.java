@@ -44,8 +44,8 @@ public class AuthorDAO extends BaseDAO<Author> {
 	 * @param author - author to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateAuthor(Author author) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_author SET authorName = ? WHERE authorId = ?",
+	public void updateAuthor(Author author) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_author SET authorName = ? WHERE authorId = ?",
 				new Object[] {author.getAuthorId(), author.getAuthorName()});
 	}
 	

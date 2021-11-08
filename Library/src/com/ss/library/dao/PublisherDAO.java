@@ -51,8 +51,8 @@ public class PublisherDAO extends BaseDAO<Publisher>{
 	 * @param pb - publisher to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updatePublisher(Publisher pb) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_publisher SET publisherName = ? AND publisherAddress = ? AND publisherPhone = ? WHERE publisherId = ?",
+	public void updatePublisher(Publisher pb) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_publisher SET publisherName = ?, publisherAddress = ?, publisherPhone = ? WHERE publisherId = ?",
 				new Object[] {pb.getName(), pb.getAddress(), pb.getPhone(), pb.getPubId()});
 	}
 	

@@ -18,9 +18,14 @@ import java.util.List;
 public abstract class BaseDAO<T> {
 	
 	protected Connection conn = null;
+	public static final String driver = "com.mysql.cj.jdbc.Driver";
+	public static final String url = "jdbc:mysql://localhost/library";
+	public static final String username = "root";
+	public static final String password = "Blackmamba24";
 	
 	public BaseDAO(Connection conn) {
 		this.conn = conn;
+
 	}
 	
 	protected void save(String sql, Object[] vals) throws ClassNotFoundException, SQLException {

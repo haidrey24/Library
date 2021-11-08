@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ss.library.entity.BookAuthors;
 import com.ss.library.entity.LibraryBranch;
 
 /**
@@ -51,10 +52,15 @@ public class LibraryBranchDAO extends BaseDAO<LibraryBranch> {
 	 * @param lb - LibraryBranch to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateLibraryBranch(LibraryBranch lb) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_library_branch SET branchName = ? AND branchAddress = ? WHERE branchId = ?",
+	public void updateLibraryBranch(LibraryBranch lb) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_library_branch SET branchName = ?, branchAddress = ? WHERE branchId = ?",
 				new Object[] {lb.getBranchName(), lb.getBranchAddress(), lb.getBranchId()});
 	}
+	
+//	public Integer updateLibraryBranch(String name, String address, Integer id) throws ClassNotFoundException, SQLException {
+//		return saveWithPK("UPDATE tbl_library_branch SET branchName = ? AND branchAddress = ? WHERE branchId = ?",
+//				new Object[] {name, address, id});
+//	}
 	
 	/*
 	 * Used to delete the LibraryBranch from the table
@@ -71,7 +77,7 @@ public class LibraryBranchDAO extends BaseDAO<LibraryBranch> {
 	public List<LibraryBranch> readLibraryBranch() throws ClassNotFoundException, SQLException {
 		return read("SELECT * FROM tbl_library_branch", null);
 	}
-
+	
 	/*
 	 * Used to extract the data from the table
 	 * @return List of the extracted data

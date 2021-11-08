@@ -51,8 +51,8 @@ public class GenreDAO extends BaseDAO<Genre> {
 	 * @param genre - genre to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateGenre(Genre genre) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_genre SET genre_name = ? WHERE genre_id = ?",
+	public void updateGenre(Genre genre) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_genre SET genre_name = ? WHERE genre_id = ?",
 				new Object[] {genre.getGenreName(), genre.getGenreId()});
 	}
 

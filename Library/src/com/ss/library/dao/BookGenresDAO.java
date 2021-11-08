@@ -51,8 +51,8 @@ public class BookGenresDAO extends BaseDAO<BookGenres> {
 	 * @param bg - BookGenre to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateBookGenre(BookGenres bg) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_book_genres SET bookId = ? WHERE genre_id = ?",
+	public void updateBookGenre(BookGenres bg) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_book_genres SET bookId = ? WHERE genre_id = ?",
 				new Object[] {bg.getBookId(), bg.getGenreId()});
 	}
 	

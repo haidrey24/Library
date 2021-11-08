@@ -51,8 +51,8 @@ public class BorrowerDAO extends BaseDAO<Borrower> {
 	 * @param borrower - borrower to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateBorrower(Borrower borrower) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_borrower SET name = ? AND address = ? AND phone = ? WHERE cardNo = ?",
+	public void updateBorrower(Borrower borrower) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_borrower SET name = ?, address = ?, phone = ? WHERE cardNo = ?",
 				new Object[] {borrower.getName(), borrower.getAddress(), borrower.getPhone(), borrower.getCardNo()});
 	}
 	

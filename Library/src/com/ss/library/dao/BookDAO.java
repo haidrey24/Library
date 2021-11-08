@@ -51,8 +51,8 @@ public class BookDAO extends BaseDAO<Book> {
 	 * @param book - book to update in the table
 	 * @return 1 - first column from table if updating is successful
 	 */
-	public Integer updateBook(Book book) throws ClassNotFoundException, SQLException {
-		return saveWithPK("UPDATE tbl_book SET title = ? AND authId = ? AND pubId = ? WHERE bookId = ?",
+	public void updateBook(Book book) throws ClassNotFoundException, SQLException {
+		save("UPDATE tbl_book SET title = ?, authId = ?, pubId = ? WHERE bookId = ?",
 				new Object[] {book.getTitle(), book.getAuthId(), book.getPubId(), book.getBookId()});
 	}
 	
